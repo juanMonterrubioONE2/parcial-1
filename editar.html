@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopMaster - Editar Producto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ShopMaster - Editar Producto</h1>
+  </header>
+
+  <main class="form-container">
+    <div id="loading" class="mensaje info">Cargando producto...</div>
+
+    <form id="form-editar-producto" class="oculto">
+      <input type="hidden" id="id-producto">
+
+      <div class="form-group">
+        <label for="titulo">Título *</label>
+        <input type="text" id="titulo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="precio">Precio ($)*</label>
+        <input type="number" id="precio" step="0.01" min="0.01" required>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Categoría *</label>
+        <select id="categoria" required>
+          <option value="">Selecciona una categoría</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción *</label>
+        <textarea id="descripcion" rows="5" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-secundario" onclick="window.location.href='index.html'">Cancelar</button>
+        <button type="submit" class="btn-primario">Guardar Cambios</button>
+      </div>
+    </form>
+
+    <div id="mensaje" class="mensaje oculto"></div>
+  </main>
+
+  <script src="editar.js"></script>
+</body>
+</html>

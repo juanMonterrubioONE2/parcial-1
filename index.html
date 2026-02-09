@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopMaster - Panel de Administración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ShopMaster - Gestión de Inventario</h1>
+    <p>Administración de productos</p>
+  </header>
+
+  <div class="barra-superior">
+    <div class="barra-busqueda">
+      <input type="text" id="input-busqueda" placeholder="Buscar por nombre...">
+      <button id="btn-buscar">Buscar</button>
+    </div>
+
+    <button id="btn-nuevo" class="btn-primario">+ Nuevo Producto</button>
+  </div>
+
+  <div class="filtros">
+    <div class="filtro-item">
+      <label>Categoría:</label>
+      <select id="select-categoria">
+        <option value="">Todas las categorías</option>
+      </select>
+    </div>
+
+    <!-- Opcional: ordenamiento -->
+    <div class="filtro-item">
+      <label>Ordenar por:</label>
+      <select id="select-orden">
+        <option value="">Sin orden</option>
+        <option value="title-asc">Nombre (A-Z)</option>
+        <option value="title-desc">Nombre (Z-A)</option>
+        <option value="price-asc">Precio (menor → mayor)</option>
+        <option value="price-desc">Precio (mayor → menor)</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
+    <div id="contenedor-productos" class="grid-productos"></div>
+  </main>
+
+  <footer class="paginacion">
+    <button id="btn-anterior" disabled>Anterior</button>
+    <span id="info-pagina">Página 1 de 1</span>
+    <button id="btn-siguiente" disabled>Siguiente</button>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
