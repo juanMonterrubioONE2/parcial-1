@@ -1,10 +1,8 @@
-// agregar.js
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-nuevo-producto');
   const selectCategoria = document.getElementById('categoria');
   const mensaje = document.getElementById('mensaje');
 
-  // Cargar categorías dinámicamente
   async function cargarCategorias() {
     try {
       const res = await fetch('https://dummyjson.com/products/category-list');
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await res.json();
       mostrarMensaje('exito', `Producto creado con éxito: ${data.title} (ID: ${data.id})`);
 
-      // Limpiar formulario
       form.reset();
       selectCategoria.value = '';
 
